@@ -2,13 +2,14 @@
 положительными трёхзначными числами. Напишите программу, 
 которая покажет количество чётных чисел в массиве. */
 
+Console.Write("Введите количество элементов массива: ");
+string iNum = Console.ReadLine();
+int Num = int.Parse(iNum);
 Random rndNum = new Random();
-Random rndLenght = new Random();
-int lenght = rndLenght.Next(2, 11);
-int[] arrNum = new int[lenght];
+int[] arrNum = new int[Num];
 int i = 0;
 int count = 0;
-for (i = 0; i < lenght; i++) //заполняем массив
+for (i = 0; i < Num; i++) //заполняем массив
 {
     int num = rndNum.Next(100, 1000);
     arrNum[i] = num;
@@ -20,4 +21,4 @@ for (i = 0; i < lenght; i++) //заполняем массив
     }
 }
 Console.WriteLine();
-Console.WriteLine($"Количество элементов в массиве - {lenght}, из них чётных - {count} ");
+Console.WriteLine($"Количество элементов в массиве - {Num}, из них чётных - {count} ");
